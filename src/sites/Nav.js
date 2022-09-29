@@ -8,9 +8,9 @@ const Nav = () => {
         <div className="nav-container">
             <MiniLogo />
             <ul>
-                <li><a href="news.asp">OFERTA</a></li>
-                <li><a href="contact.asp">REALIZACJE</a></li>
-                <li><a href="about.asp">KONTAKT</a></li>
+                <li><a href="#offer">OFERTA</a></li>
+                <li><a href="#gallery">REALIZACJE</a></li>
+                <li><a href="#contact">KONTAKT</a></li>
             </ul>
         </div>
     )

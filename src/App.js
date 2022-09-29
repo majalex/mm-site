@@ -6,6 +6,7 @@ import Gallery from './sites/Gallery';
 import { useEffect } from 'react';
 import { gsap } from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import Contact from './sites/Contact';
 
 
 const App = () => {
@@ -13,9 +14,12 @@ const App = () => {
   useEffect(() => {
     gsap.registerPlugin(DrawSVGPlugin)
 
+    //gsap.fromTo("*", {overflow:"hidden"}, {overflow:"visible", duration:5})
+    
     gsap.timeline()
+      .to("body",{overflow: "hidden"})
 
-      .from(".prefix__st2", {drawSVG: "50% 50%",duration: 4})
+      .from(".prefix__st2, .border", {drawSVG: "50% 50%",duration: 4})
 
       .to(".prefix__st2", {
         duration:1,
@@ -25,21 +29,45 @@ const App = () => {
       .from(".nav-container", {
         yPercent: -100,
         duration: 1,
-        ease: "bounce"
+        ease: "circ"
       })
+
+      .to("body", {overflowY:"visible"})
+
       .from(".header-text", {
         opacity: 0,
-        duration:2,
       })
       .from(".offer-txt", {
         opacity:0,
-        duration:1,
+        duration:2
       })
-      .from(".row",  {
-        xPercent: 100,
+      .from(".txt-l",  {
+        xPercent: -300,
         stagger: 0.1,
-        duration: 2
+        duration: 1,
+        ease: "back"
       })
+      .from(".icon-r",  {
+        xPercent: 300,
+        stagger: 0.1,
+        duration: 1,
+        ease: "back"
+
+      })
+      .from(".txt-r",  {
+        xPercent: 300,
+        stagger: 0.1,
+        duration: 1,
+        ease: "back"
+      })
+      .from(".icon-l",  {
+        xPercent: -300,
+        stagger: 0.1,
+        duration: 1,
+        ease: "back"
+      })
+
+
   }, [])
   
   return (
@@ -48,6 +76,7 @@ const App = () => {
       <Header></Header>
       <Offer></Offer>
       <Gallery></Gallery>
+      <Contact></Contact>
     </div>
   );
 }
