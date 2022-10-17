@@ -1,3 +1,5 @@
+import '../styles/Gallery.scss';
+
 import image1 from "../assets/photos/1.jpeg"
 import image3 from "../assets/photos/3.jpeg"
 import image4 from "../assets/photos/4.jpeg"
@@ -9,14 +11,10 @@ import image9 from "../assets/photos/9.jpeg"
 import image10 from "../assets/photos/10.jpeg"
 import image11 from "../assets/photos/11.jpeg"
 
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
-
 const Gallery = () => {
     return (
         <div className="gallery" id="gallery">
             <h1>REALIZACJE</h1>
-            <hr></hr>
             <div className="gallery-container">
                 <div className="img-box">
                     <img src={image1} alt="img1" />

@@ -1,3 +1,5 @@
+import '../styles/Contact.scss';
+
 import { faCommentSms, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -7,7 +9,6 @@ const Contact = () => {
             <div className="contact" id="contact">
                 <div className="contact-box">
                     <h1>KONTAKT</h1>
-                    <hr></hr>
                 </div>
                 <div className="contact-data">
                     <div className="data">
@@ -26,7 +27,7 @@ const Contact = () => {
             </div>
             <div className="footer">
                 <p>Wykonanie i projekt strony
-                    <a href="https://majalex.github.io/portfolio/" target="_blank"> Link</a>
+                    <a href="https://majalex.github.io/portfolio/" target="_blank" rel="noreferrer"> Link</a>
                 </p>
             </div>
         </>

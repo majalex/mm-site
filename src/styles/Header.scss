@@ -1,0 +1,82 @@
+@import './Variables.scss';
+@import './Global.scss';
+
+.HeaderSection{
+    .Navigation {
+        height: auto;
+        position: absolute;
+        top: 20px;
+        z-index: 1;
+        right: 20px;
+
+        ul {
+           
+            li {
+                display: inline-block;
+                // padding: 25px;
+                
+                a {
+                    right: 0;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: $third-color;
+                    transition-duration: 4s;
+                    padding: 25px;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    }
+
+    .Logo-container {    
+        .bg {
+            clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+            background-color: $base-color;
+            width: 70%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .svg {
+            width: 35%;
+            z-index: 1;
+            position: absolute;
+            left: 20px;
+            top:5%;
+        }
+
+        img{
+            width: 60%;
+            top:30%;
+            z-index: 1;
+            position: absolute;
+            right: 0;
+        }
+
+        .text-zone{
+            z-index: 1;
+            color: $first-color;
+            position: absolute;
+            width: 30%;
+            top:70%;
+            text-align: right;
+            left: 5%;
+            h1{
+                font-family: $base-font;
+                font-weight: 400;
+            }
+            p{
+                font-family: $second-font;
+                font-weight: 100;
+            }   
+        }
+    }
+
+}
